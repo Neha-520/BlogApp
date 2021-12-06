@@ -1,4 +1,4 @@
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from "./Pages/Home/Home";
 import { NavBar } from "./components/Navbar/NavBar";
 import { Single } from "./Pages/single/Single";
@@ -11,28 +11,23 @@ import { Register } from "./Pages/register/Register";
 
 function App() {
   return (
-    <>
+    <Router>
       <NavBar />
-      <Switch>
-        <Route exact path="/">
-          <Homepage />
-        </Route>
-        <Route path="/posts">
-          <Home />
-        </Route>
-        <Route path="/register">
-          <Register />
-        </Route>
-        <Route path="/login"> <Login /></Route>
-        <Route path="/post/:id">
-          <Single />
-        </Route>
-        <Route path="/write"><Write /></Route>
-        <Route path="/settings">
-          <Setting />
-        </Route>
-      </Switch>
-    </>
+      <Routes>
+        <Route exact path="/" component={Home} />
+
+        <Route path="/posts" component={Home} />
+
+        <Route path="/register" component={Register} />
+
+        <Route path="/login" component={Login} />
+        <Route path="/post/:id" component={Single} />
+
+        <Route path="/write" component={Write} />
+        <Route path="/settings" component={Setting} />
+
+      </Routes>
+    </Router>
   );
 }
 
