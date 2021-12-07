@@ -1,6 +1,6 @@
 import './write.css'
 
-export const Write = () => {
+export default function Write() {
     return (
         <div className="write">
             <img

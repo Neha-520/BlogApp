@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Home } from "./Pages/Home/Home";
+import Home from "./Pages/Home/Home";
 import { NavBar } from "./components/Navbar/NavBar";
 import { Single } from "./Pages/single/Single";
-import { Write } from "./Pages/write/Write";
+import Write from "./Pages/write/Write.jsx";
 import { Setting } from "./Pages/settings/Setting";
 import { Login } from "./Pages/login/Login";
 import { Register } from "./Pages/register/Register";
@@ -11,7 +11,7 @@ import { Register } from "./Pages/register/Register";
 
 function App() {
   return (
-    <Router>
+    <>
       <NavBar />
       <Routes>
         <Route exact path="/" component={Home} />
@@ -25,9 +25,8 @@ function App() {
 
         <Route path="/write" component={Write} />
         <Route path="/settings" component={Setting} />
-
       </Routes>
-    </Router>
+    </>
   );
 }
 
