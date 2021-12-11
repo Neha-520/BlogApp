@@ -14,17 +14,17 @@ function App() {
     <>
       <NavBar />
       <Routes>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" element={<Home />} />
 
-        <Route path="/posts" component={Home} />
+        <Route path="/posts" element={<Home />} />
 
-        <Route path="/register" component={Register} />
+        <Route path="/register" element={<Register />} />
 
-        <Route path="/login" component={Login} />
-        <Route path="/post/:id" component={Single} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/post/:id" element={<Single />} />
 
-        <Route path="/write" component={Write} />
-        <Route path="/settings" component={Setting} />
+        <Route path="/write" element={<Write />} />
+        <Route path="/settings" element={<Setting />} />
       </Routes>
     </>
   );
