@@ -6,7 +6,7 @@ export const Sidebar = () => {
         <div className="sidebar">
             <div className="sidebarItem">
                 <span className="sidebarTitle">ABOUT ME</span>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPl7omlmtQl1Y9ZSbI8KOXMiLjhIzFqHbE3Q&usqp=CAU"></img>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPl7omlmtQl1Y9ZSbI8KOXMiLjhIzFqHbE3Q&usqp=CAU" alt=""></img>
                 <p>
                     Laboris sunt aute cupidatat velit magna velit ullamco dolore mollit
                     amet ex esse.Sunt eu ut nostrud id quis proident.
