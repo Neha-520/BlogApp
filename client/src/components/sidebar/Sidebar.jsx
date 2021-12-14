@@ -1,7 +1,18 @@
-
+import axios from 'axios';
+import { useEffect, useState } from 'react'
 import './sidebar.css'
 
 export const Sidebar = () => {
+
+    const [cat, setCat] = useState([]);
+
+    useEffect(() => {
+        const getCat = async () => {
+            const res = await axios.get("/categories")
+            setCat(res.data);
+        }
+        getCat();
+    }, [])
     return (
         <div className="sidebar">
             <div className="sidebarItem">
