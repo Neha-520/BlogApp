@@ -8,7 +8,7 @@ export const Login = () => {
 
     const userRef = useRef();
     const passwordRef = useRef();
-    const { user, dispatch, isFetching } = useContext(Context)
+    const { dispatch, isFetching } = useContext(Context)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -24,7 +24,7 @@ export const Login = () => {
             console.log(err);
         }
     }
-    console.log(user);
+
     return (
         <div className="login">
             <span className="loginTitle">Login</span>
@@ -33,7 +33,7 @@ export const Login = () => {
                 <input ref={userRef} className="loginInput" type="text" placeholder="Enter your username" />
                 <label>Password</label>
                 <input ref={passwordRef} className="loginInput" type="password" placeholder="Enter your password..." />
-                <button className="loginButton" type='submit'>Login</button>
+                <button className="loginButton" type='submit' disabled={isFetching}>Login</button>
             </form>
             <button className="loginRegisterButton">
                 <Link className="link" to="/register">
