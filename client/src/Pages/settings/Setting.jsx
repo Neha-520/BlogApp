@@ -1,7 +1,14 @@
+import { useContext, useState } from 'react'
+import { Context } from '../../context/Context';
 import { Sidebar } from '../../components/sidebar/Sidebar'
 import './setting.css'
 
 export const Setting = () => {
+
+    const { user } = useContext(Context);
+    const [file, setFile] = useState(null);
+
+
     return (
         <div className="settings">
             <div className="settingsWrapper">
@@ -13,7 +20,7 @@ export const Setting = () => {
                     <label>Profile Picture</label>
                     <div className="settingsPP">
                         <img
-                            src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            src={user.profilePic}
                             alt=""
                         />
                         <label htmlFor="fileInput">
