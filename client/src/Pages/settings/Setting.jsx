@@ -30,7 +30,7 @@ export const Setting = () => {
             data.append("file", file);
             updatedUser.profilePic = filename;
             try {
-                await axios.post("/upload", data);
+                await axios.put("/upload", data);
             } catch (err) { }
         }
         try {
@@ -59,7 +59,7 @@ export const Setting = () => {
                             alt=""
                         />
                         <label htmlFor="fileInput">
-                            <i class="settingsPPIcon zmdi zmdi-account-circle zmdi-hc-lg"></i>{" "}
+                            <i className="settingsPPIcon zmdi zmdi-account-circle zmdi-hc-lg"></i>{" "}
                         </label>
                         <input
                             id="fileInput"
