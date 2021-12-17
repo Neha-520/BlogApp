@@ -21,14 +21,14 @@ export const SinglePost = () => {
             const res = await axios.get('/posts/' + path);
             setPost(res.data);
             setTitle(res.data.title);
-            setTitle(res.data.desc)
+            setDesc(res.data.desc)
         }
         getPost();
     }, [path])
 
     const handleDelete = async () => {
         try {
-            await axios.delete("/posts/" + path, {
+            await axios.delete(`/posts/${post._id}`, {
                 data: { userName: user.userName }
             })
             window.location.replace("/")
@@ -37,7 +37,7 @@ export const SinglePost = () => {
 
     const handleUpdate = async () => {
         try {
-            await axios.put("/posts/" + path, {
+            await axios.put(`/posts/${post._id}`, {
                 userName: user.userName, title, desc
             })
             setUpdateMode(false);

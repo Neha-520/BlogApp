@@ -4,6 +4,7 @@ import { Context } from "../../context/Context";
 import "./navbar.css";
 
 
+
 export const NavBar = () => {
 
     const { user, dispatch } = useContext(Context);
@@ -47,7 +48,7 @@ export const NavBar = () => {
             <div className="topRight">
                 {user ? (
                     <Link to="/settings">
-                        <img className="topImage" src={PF + user.profilePic} alt="" />
+                        <img className="topImage" src={user.profilePic ? PF + user.profilePic : '/img.jpg'} alt="" />
                     </Link>) : (
                     <ul className="topList">
                         <li className="topListItem">

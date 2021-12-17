@@ -10,8 +10,8 @@ export const Setting = () => {
     const PF = "http://localhost:5000/images/"
 
     const [file, setFile] = useState(null);
-    const [userName, setUserName] = useState("");
-    const [email, setEmail] = useState("");
+    const [userName, setUserName] = useState(user.userName);
+    const [email, setEmail] = useState(user.email);
     const [password, setPassword] = useState("");
 
     const [success, setSuccess] = useState(false);
@@ -21,7 +21,7 @@ export const Setting = () => {
         dispatch({ type: "UPDATE_START" })
         const updatedUser = {
             userId: user._id,
-            userName, email, password
+            userName: userName, email: email, password: password
         }
         if (file) {
             const data = new FormData();
@@ -44,12 +44,12 @@ export const Setting = () => {
         }
     };
 
+
     return (
         <div className="settings">
             <div className="settingsWrapper">
                 <div className="settingsTitle">
                     <span className="settingsTitleUpdate">Update Your Account</span>
-                    <span className="settingsTitleDelete">Delete Account</span>
                 </div>
                 <form className="settingsForm" onSubmit={handleSubmit}>
                     <label>Profile Picture</label>
