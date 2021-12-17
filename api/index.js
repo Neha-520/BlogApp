@@ -44,9 +44,9 @@ app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
-// app.use("/", (req, res) => {
-//     console.log("home page")
-// })
+app.use("/", (req, res) => {
+
+})
 
 app.listen("5000", () => {
     console.log("Backend is running");

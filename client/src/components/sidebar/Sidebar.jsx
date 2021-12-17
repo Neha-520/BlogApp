@@ -29,8 +29,8 @@ export const Sidebar = () => {
                 <ul className="sidebarList">
                     {
                         cats.map((c, i) => (
-                            <Link className='link' to={`/?cat=${c.name}`}>
-                                <li key={i} className="sidebarListItem">
+                            <Link key={i} className='link' to={`/?cat=${c.name}`}>
+                                <li className="sidebarListItem">
                                     {c.name}
                                 </li>
                             </Link>

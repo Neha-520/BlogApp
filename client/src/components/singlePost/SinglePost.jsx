@@ -61,8 +61,8 @@ export const SinglePost = () => {
                             {title}
                             {post.userName === user?.userName &&
                                 <div className="singlePostEdit">
-                                    <i class="singlePostIcon zmdi zmdi-edit" onClick={() => setUpdateMode(true)}></i>
-                                    <i class="singlePostIcon  zmdi zmdi-delete" onClick={handleDelete}></i>
+                                    <i className="singlePostIcon zmdi zmdi-edit" onClick={() => setUpdateMode(true)}></i>
+                                    <i className="singlePostIcon  zmdi zmdi-delete" onClick={handleDelete}></i>
                                 </div>
                             }
                         </h1>

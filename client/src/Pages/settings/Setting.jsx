@@ -10,8 +10,8 @@ export const Setting = () => {
     const PF = "http://localhost:5000/images/"
 
     const [file, setFile] = useState(null);
-    const [userName, setUserName] = useState(user.userName);
-    const [email, setEmail] = useState(user.email);
+    const [userName, setUserName] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const [success, setSuccess] = useState(false);
@@ -21,7 +21,7 @@ export const Setting = () => {
         dispatch({ type: "UPDATE_START" })
         const updatedUser = {
             userId: user._id,
-            userName: userName, email: email, password: password
+            userName, email, password
         }
         if (file) {
             const data = new FormData();
