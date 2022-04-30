@@ -12,6 +12,9 @@ import { Context } from './context/Context';
 
 
 function App() {
+
+  window.addEventListener("contextmenu", (e) => e.preventDefault());
+
   const { user } = useContext(Context);
   return (
     <>
